@@ -9,19 +9,19 @@ html {
 *, :before, :after {
     box-sizing: inherit;
 
-    outline: 1px solid rgb(255 0 0 / 0.25);
+    /* outline: 1px solid rgb(255 0 0 / 0.25); */
 }
 
 body {
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
 
     display: grid;
-    grid-template-rows: 1fr 12rem;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 20rem;
 
     --section-border: 0.1rem solid currentColor;
-    --section-shadow: 0 0 1rem rgb(0 0 0 / 0.1);
+    --section-shadow: 0 0 1rem rgb(0 0 0 / 0.1);t
 }
 
 body > section {
@@ -41,11 +41,15 @@ body > section {
 }
 
 /* Definisikan kubus sampel dan sisi-sisinya */
-.sample-cube {
+#cube {
     position: relative;
     transform-style: preserve-3d;
 
     --cube-face-offset: translateZ(5rem);
+
+    --transform-depth-offset: rotate3d(-1, 1, 0, 20deg);
+    transform: var(--transform-depth-offset);
+    transition: transform 1s;
 }
 .cube-face {
     position: absolute;
@@ -56,21 +60,43 @@ body > section {
     height: 10rem;
 
     /* TEMPORARY */
-    background-color: rgb(0 0 0 / 0.4);
+    /* background-color: rgb(0 0 0 / 0.4); */
+    color: white;
+    font-size: 1.25em;
+
+    /* Untuk menengahkan teks */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .cube-face.front {
-    position: relative; /* Memaksa Agar container mempunyai dimensi yang tetap */
+    position: relative; /* Memaksa agar container mempunyai dimensi yang tetap */
 
     transform: var(--cube-face-offset);
+    background-color: rgb(255 0 0 / 0.5);
 }
 .cube-face.back {
     transform: rotateY(180deg) var(--cube-face-offset);
+    background-color: rgb(255 255 0 / 0.5);
 }
-.cube-face.right  { transform: rotateY( 90deg) var(--cube-face-offset); }
-.cube-face.left   { transform: rotateY(-90deg) var(--cube-face-offset); }
-.cube-face.top    { transform: rotateX( 90deg) var(--cube-face-offset); }
-.cube-face.bottom { transform: rotateX(-90deg) var(--cube-face-offset); }
+.cube-face.right  {
+    transform: rotateY( 90deg) var(--cube-face-offset);
+    background-color: rgb(0 128 0 / 0.5);
+}
+.cube-face.left   {
+    transform: rotateY(-90deg) var(--cube-face-offset);
+    background-color: rgb(0 0 255 / 0.5);
+}
+.cube-face.top    {
+    transform: rotateX( 90deg) var(--cube-face-offset);
+    background-color: rgb(128 0 128 / 0.5);
+}
+.cube-face.bottom {
+    transform: rotateX(-90deg) var(--cube-face-offset);
+    background-color: rgb(255 192 203 / 0.5);
+}
 /* #endregion */
 
 #rightPart {
@@ -82,8 +108,17 @@ body > section {
     border-left: var(--section-border);
     box-shadow: var(--section-shadow);
     z-index: 2;
+
+    display: flex;
+    flex-direction: column;
 }
 
+#stackOfAppliedTransformations {
+    overflow-y: auto;
+    max-height: 15rem;
+}
+
+/* #region Kontrol transformasi */
 #bottomPart {
     grid-row: 2;
     grid-column: 1 / span 2;
@@ -103,6 +138,17 @@ body > section {
     flex-grow: 1;
     flex-basis: 0;
 }
+
+#bottomPart > fieldset input[type=number] {
+    width: 5rem;
+}
+
+#bottomPart > fieldset > :is(div, button) {
+    display: block;
+    width: fit-content;
+    margin: 0.5rem auto;
+}
+/* #endregion */
 
 .no-transformations-applied-helper-text {
     /* display: block; */

@@ -12,13 +12,13 @@
 
 <body>
     <section id="canvas">
-        <div class="sample-cube">
-            <div class="cube-face front" ></div>
-            <div class="cube-face back"  ></div>
-            <div class="cube-face right" ></div>
-            <div class="cube-face left"  ></div>
-            <div class="cube-face top"   ></div>
-            <div class="cube-face bottom"></div>
+        <div id="cube">
+           <div class="cube-face front">Depan</div>
+            <div class="cube-face back">Belakang</div>
+            <div class="cube-face right">Kanan</div>
+            <div class="cube-face left">Kiri</div>
+            <div class="cube-face top">Atas</div>
+            <div class="cube-face bottom">Bawah</div>
         </div>
     </section>
 
@@ -26,9 +26,9 @@
         <section>
             <h1>Anggota kelompok</h1>
             <ul>
-                <li>Krisna Mughni (19/)</li>
+                <li>Krisna Mughni (19/444057/TK/49253)</li>
                 <li>Muhammad Farrel Rafirizqy (19/444062/TK/49258)</li>
-                <li>Sagara Aldavy (19/)</li>
+                <li>Sagara Aldavy (19/444070/TK/49266)</li>
             </ul>
         </section>
         <section>
@@ -39,30 +39,64 @@
                     Silakan terapkan satu atau beberapa transformasi dari sisi bawah antarmuka.
                 </li>
             </ol>
-            <!-- <p class="no-transformations-applied-helper-text">
-                Belum ada transformasi yang diterapkan.
-                Silakan terapkan satu atau beberapa transformasi dari sisi bawah antarmuka.
-            </p> -->
         </section>
     </section>
 
     <section id="bottomPart">
         <fieldset>
             <legend>Translasi</legend>
+
+            <div>
+                <label for="translateX">X:</label> 
+                <input type="number" id="translateX" value="0">
+                <span>px</span>
+            </div>
+
+            <div>
+                <label for="translateY">Y:</label>
+                <input type="number" id="translateY" value="0">
+                <span>px</span>
+            </div>
+
+            <div>
+                <label for="translateZ">Z:</label>
+                <input type="number" id="translateZ" value="0">
+                <span>px</span>
+            </div>
+
+            <button type="button" id="applyTranslate">Terapkan</button>
         </fieldset>
 
         <fieldset>
+
+            <div>
+                <label for="translateX"></label>
+                <input type=RotationXd=Rotation on X:"ranslateX" v>l=0
+                <span>px</span>
+aluealue=0''0            </div>
+
+            <div>
+                <label for="translateY">Y:</label>
+                <input type=Rotationid=Rotation on YtranslateY" v>l=0
+                <span>px</span>
+value='0'            </div>
+
+            <div>
+                <label for="translateZ">Z:</label>
+                <input type=RotationZd=Rotation on ZtranslateZ" v>l=0
+                <span>px</span>
+Rptotatevalue='0'            </div>
+
+            <button type="button" id="applyTranslate">Terapkan</button>
             <legend>Rotasi</legend>
-        </fieldset>
+Rotiate        </fieldset>
 
         <fieldset>
             <legend>Penskalaan</legend>
         </fieldset>
-
-        <fieldset>
+ldset>    
             <legend><i>Shearing</i> (<i>Skew</i>)</legend>
         </fieldset>
-    </section>
-</body>
+    </s/body>
 
 </html>
