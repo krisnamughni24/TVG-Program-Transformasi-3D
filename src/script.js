@@ -69,14 +69,17 @@ function rotate() {
 
 // Fungsi penskalaan
 function scale() {
+    const x = getValueById("scaleX");
+    const y = getValueById("scaleY");
+    const z = getValueById("scaleZ");
     
     return {
-        description: ``,
+        description: `Skala (${x}x, ${y}x, ${z}x)`,
         matrix: [
-            [],
-            [],
-            [],
-            []
+            [x, 0, 0, 0],
+            [0, y, 0, 0],
+            [0, 0, z, 0],
+            [0, 0, 0, 1]
         ]
     }
 }
