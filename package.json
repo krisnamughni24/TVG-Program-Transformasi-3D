@@ -1,0 +1,20 @@
+{
+  "name": "tvg-program-transformasi-3d-kelompok",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "main": "program.js",
+  "scripts": {
+    "start": "electron .",
+    "start:server": "python3 -m http.server 8000 --directory src"
+  },
+  "author": "Muhammad Farrel Rafirizqy - 19/444062/TK/49258",
+  "contributors": [
+    "Krisna Mughni - 19/",
+    "Sagara Aldavy - 19/"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.2"
+  }
+}

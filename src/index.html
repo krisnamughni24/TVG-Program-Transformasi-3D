@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Transformasi 3D</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <section id="canvas">
+        <div class="sample-cube">
+            <div class="cube-face front" ></div>
+            <div class="cube-face back"  ></div>
+            <div class="cube-face right" ></div>
+            <div class="cube-face left"  ></div>
+            <div class="cube-face top"   ></div>
+            <div class="cube-face bottom"></div>
+        </div>
+    </section>
+
+    <section id="rightPart">
+        <section>
+            <h1>Anggota kelompok</h1>
+            <ul>
+                <li>Krisna Mughni (19/)</li>
+                <li>Muhammad Farrel Rafirizqy (19/444062/TK/49258)</li>
+                <li>Sagara Aldavy (19/)</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Transformasi yang diterapkan</h1>
+            <ol id="stackOfAppliedTransformations">
+                <li class="no-transformations-applied-helper-text">
+                    Belum ada transformasi yang diterapkan.
+                    Silakan terapkan satu atau beberapa transformasi dari sisi bawah antarmuka.
+                </li>
+            </ol>
+            <!-- <p class="no-transformations-applied-helper-text">
+                Belum ada transformasi yang diterapkan.
+                Silakan terapkan satu atau beberapa transformasi dari sisi bawah antarmuka.
+            </p> -->
+        </section>
+    </section>
+
+    <section id="bottomPart">
+        <fieldset>
+            <legend>Translasi</legend>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rotasi</legend>
+        </fieldset>
+
+        <fieldset>
+            <legend>Penskalaan</legend>
+        </fieldset>
+
+        <fieldset>
+            <legend><i>Shearing</i> (<i>Skew</i>)</legend>
+        </fieldset>
+    </section>
+</body>
+
+</html>
