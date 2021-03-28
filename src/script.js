@@ -86,14 +86,17 @@ function scale() {
 
 // Fungsi shearing
 function shear() {
+    const x = getValueById("shearX");
+    const y = getValueById("shearY");
+    const z = getValueById("shearZ");
     
     return {
-        description: ``,
+        description: `Shearing (${x}x, ${y}x, ${z}x)`,
         matrix: [
-            [],
-            [],
-            [],
-            []
+            [1, 0, x, 0],
+            [0, 1, y, 0],
+            [0, 0, 1, 0],
+            [0, 0, 0, 1]
         ]
     }
 }
