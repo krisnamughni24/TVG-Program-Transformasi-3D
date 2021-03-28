@@ -104,3 +104,6 @@ function bind(buttonId, transformationFunction) {
 }
 
 bind("applyTranslate", translate);
+bind("applyRotate"   , rotate);
+bind("applyScale"    , scale);
+bind("applySkew"     , shear);
